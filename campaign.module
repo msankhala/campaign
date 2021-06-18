@@ -26,13 +26,13 @@ function campaign_help($route_name, RouteMatchInterface $route_match) {
 /**
  * Implements hook_theme().
  */
-function campaign_theme() {
-  return [
-    'campaign' => [
-      'render element' => 'children',
-    ],
-  ];
-}
+// function campaign_theme() {
+//   return [
+//     'campaign' => [
+//       'render element' => 'children',
+//     ],
+//   ];
+// }
 
 /**
  * Implements hook_theme().

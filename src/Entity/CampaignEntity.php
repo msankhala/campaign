@@ -63,7 +63,7 @@ use Drupal\user\UserInterface;
  *     "add-form" = "/admin/campaigns/campaign/add/{campaign_type}",
  *     "edit-form" = "/admin/campaigns/campaign/{campaign}/edit",
  *     "delete-form" = "/admin/campaigns/campaign/{campaign}/delete",
- *     "collection" = "/admin/campaigns/campaign",
+ *     "collection" = "/admin/campaigns",
  *   },
  *   bundle_entity_type = "campaign_type",
  *   field_ui_base_route = "entity.campaign_type.edit_form"

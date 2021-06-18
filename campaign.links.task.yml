@@ -1,3 +1,9 @@
+entity.campaign.collection:
+  title: Campaigns
+  description: List of Campaigns.
+  route_name: entity.campaign.collection
+  base_route: system.admin_content
+
 # Campaign routing definition
 
 entity.campaign.canonical:

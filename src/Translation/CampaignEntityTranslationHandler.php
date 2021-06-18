@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\campaign;
+namespace Drupal\campaign\Translation;
 
 use Drupal\content_translation\ContentTranslationHandler;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\campaign;
+namespace Drupal\campaign\ListBuilder;
 
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\EntityListBuilder;
@@ -17,6 +17,7 @@ class CampaignEntityListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildHeader() {
+    $header = [];
     $header['id'] = $this->t('Campaign ID');
     $header['name'] = $this->t('Name');
     return $header + parent::buildHeader();
@@ -26,6 +27,7 @@ class CampaignEntityListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildRow(EntityInterface $entity) {
+    $row = [];
     /* @var \Drupal\campaign\Entity\CampaignEntity $entity */
     $row['id'] = $entity->id();
     $row['name'] = Link::createFromRoute(

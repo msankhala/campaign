@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\campaign;
+namespace Drupal\campaign\ListBuilder;
 
 use Drupal\Core\Config\Entity\ConfigEntityListBuilder;
 use Drupal\Core\Entity\EntityInterface;
@@ -14,6 +14,7 @@ class CampaignEntityTypeListBuilder extends ConfigEntityListBuilder {
    * {@inheritdoc}
    */
   public function buildHeader() {
+    $header = [];
     $header['label'] = $this->t('Campaign type');
     $header['id'] = $this->t('Machine name');
     return $header + parent::buildHeader();
@@ -23,6 +24,7 @@ class CampaignEntityTypeListBuilder extends ConfigEntityListBuilder {
    * {@inheritdoc}
    */
   public function buildRow(EntityInterface $entity) {
+    $row = [];
     $row['label'] = $entity->label();
     $row['id'] = $entity->id();
     // You probably want a few more properties here...

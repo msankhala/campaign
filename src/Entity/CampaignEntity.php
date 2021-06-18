@@ -19,11 +19,18 @@ use Drupal\user\UserInterface;
  *   id = "campaign",
  *   label = @Translation("Campaign"),
  *   bundle_label = @Translation("Campaign type"),
+ *   label_collection = @Translation("Campaigns"),
+ *   label_singular = @Translation("Campaign"),
+ *   label_plural = @Translation("Campaigns"),
+ *   label_count = @PluralTranslation(
+ *     singular = "@count campaign",
+ *     plural = "@count campaigns",
+ *   ),
  *   handlers = {
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
- *     "list_builder" = "Drupal\campaign\CampaignEntityListBuilder",
+ *     "list_builder" = "Drupal\campaign\ListBuilder\CampaignEntityListBuilder",
  *     "views_data" = "Drupal\campaign\Entity\CampaignEntityViewsData",
- *     "translation" = "Drupal\campaign\CampaignEntityTranslationHandler",
+ *     "translation" = "Drupal\campaign\Translation\CampaignEntityTranslationHandler",
  *
  *     "form" = {
  *       "default" = "Drupal\campaign\Form\CampaignEntityForm",
@@ -32,9 +39,9 @@ use Drupal\user\UserInterface;
  *       "delete" = "Drupal\campaign\Form\CampaignEntityDeleteForm",
  *     },
  *     "route_provider" = {
- *       "html" = "Drupal\campaign\CampaignEntityHtmlRouteProvider",
+ *       "html" = "Drupal\campaign\Routing\CampaignEntityHtmlRouteProvider",
  *     },
- *     "access" = "Drupal\campaign\CampaignEntityAccessControlHandler",
+ *     "access" = "Drupal\campaign\Access\CampaignEntityAccessControlHandler",
  *   },
  *   base_table = "campaign",
  *   data_table = "campaign_field_data",
@@ -51,7 +58,7 @@ use Drupal\user\UserInterface;
  *     "published" = "status",
  *   },
  *   links = {
- *     "canonical" = "/admin/campaigns/campaign/{campaign}",
+ *     "canonical" = "/campaigns/campaign/{campaign}",
  *     "add-page" = "/admin/campaigns/campaign/add",
  *     "add-form" = "/admin/campaigns/campaign/add/{campaign_type}",
  *     "edit-form" = "/admin/campaigns/campaign/{campaign}/edit",

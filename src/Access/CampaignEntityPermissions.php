@@ -1,18 +1,16 @@
 <?php
 
-namespace Drupal\campaign;
+namespace Drupal\campaign\Access;
 
+use Drupal\campaign\Entity\CampaignEntityType;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
-use Drupal\campaign\Entity\CampaignEntity;
-
 
 /**
  * Provides dynamic permissions for Campaign of different types.
  *
  * @ingroup campaign
- *
  */
-class CampaignEntityPermissions{
+class CampaignEntityPermissions {
 
   use StringTranslationTrait;
 
@@ -26,7 +24,7 @@ class CampaignEntityPermissions{
   public function generatePermissions() {
     $perms = [];
 
-    foreach (CampaignEntity::loadMultiple() as $type) {
+    foreach (CampaignEntityType::loadMultiple() as $type) {
       $perms += $this->buildPermissions($type);
     }
 
@@ -36,13 +34,13 @@ class CampaignEntityPermissions{
   /**
    * Returns a list of node permissions for a given node type.
    *
-   * @param \Drupal\campaign\Entity\CampaignEntity $type
+   * @param \Drupal\campaign\Entity\CampaignEntityType $type
    *   The CampaignEntity type.
    *
    * @return array
    *   An associative array of permission names and descriptions.
    */
-  protected function buildPermissions(CampaignEntity $type) {
+  protected function buildPermissions(CampaignEntityType $type) {
     $type_id = $type->id();
     $type_params = ['%type_name' => $type->label()];
 

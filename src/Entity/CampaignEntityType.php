@@ -10,16 +10,23 @@ use Drupal\Core\Config\Entity\ConfigEntityBundleBase;
  * @ConfigEntityType(
  *   id = "campaign_type",
  *   label = @Translation("Campaign type"),
+ *   label_collection = @Translation("Campaign types"),
+ *   label_singular = @Translation("Campaign type"),
+ *   label_plural = @Translation("Campaign types"),
+ *   label_count = @PluralTranslation(
+ *     singular = "@count campaign type",
+ *     plural = "@count campaign types",
+ *   ),
  *   handlers = {
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
- *     "list_builder" = "Drupal\campaign\CampaignEntityTypeListBuilder",
+ *     "list_builder" = "Drupal\campaign\ListBuilder\CampaignEntityTypeListBuilder",
  *     "form" = {
  *       "add" = "Drupal\campaign\Form\CampaignEntityTypeForm",
  *       "edit" = "Drupal\campaign\Form\CampaignEntityTypeForm",
  *       "delete" = "Drupal\campaign\Form\CampaignEntityTypeDeleteForm"
  *     },
  *     "route_provider" = {
- *       "html" = "Drupal\campaign\CampaignEntityTypeHtmlRouteProvider",
+ *       "html" = "Drupal\campaign\Routing\CampaignEntityTypeHtmlRouteProvider",
  *     },
  *   },
  *   config_prefix = "campaign_type",

@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\campaign;
+namespace Drupal\campaign\Access;
 
 use Drupal\Core\Entity\EntityAccessControlHandler;
 use Drupal\Core\Entity\EntityInterface;

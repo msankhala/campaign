@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\campaign;
+namespace Drupal\campaign\Routing;
 
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Entity\Routing\AdminHtmlRouteProvider;

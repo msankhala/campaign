@@ -19,4 +19,4 @@ view unpublished campaign entities:
   title: 'View unpublished Campaign entities'
 
 permission_callbacks:
-  - \Drupal\campaign\CampaignEntityPermissions::generatePermissions
+  - \Drupal\campaign\Access\CampaignEntityPermissions::generatePermissions

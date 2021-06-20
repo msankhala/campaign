@@ -22,3 +22,4 @@ entity.campaign_type.collection:
   description: 'List Campaign type (bundles)'
   parent: campaign.structure
   weight: 99
+

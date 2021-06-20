@@ -37,6 +37,7 @@ use Drupal\user\UserInterface;
  *       "add" = "Drupal\campaign\Form\CampaignEntityForm",
  *       "edit" = "Drupal\campaign\Form\CampaignEntityForm",
  *       "delete" = "Drupal\campaign\Form\CampaignEntityDeleteForm",
+ *       "settings" = "Drupal\campaign\Form\CampaignEntitySettingsForm",
  *     },
  *     "route_provider" = {
  *       "html" = "Drupal\campaign\Routing\CampaignEntityHtmlRouteProvider",
@@ -64,6 +65,7 @@ use Drupal\user\UserInterface;
  *     "edit-form" = "/admin/campaigns/campaign/{campaign}/edit",
  *     "delete-form" = "/admin/campaigns/campaign/{campaign}/delete",
  *     "collection" = "/admin/campaigns",
+ *     "settings" = "/admin/campaigns/campaign/{campaign}/settings",
  *   },
  *   bundle_entity_type = "campaign_type",
  *   field_ui_base_route = "entity.campaign_type.edit_form"

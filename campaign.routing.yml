@@ -7,3 +7,11 @@ campaign.structure:
     _title: 'Campaigns'
   requirements:
     _permission: 'administer campaign entities'
+
+entity.campaign.settings:
+  path: '/admin/campaigns/campaign/{campaign}/settings'
+  defaults:
+    _form: '\Drupal\campaign\Form\CampaignEntitySettingsForm'
+    _title: 'Campaign Settings'
+  requirements:
+    _permission: 'administer campaign entities'

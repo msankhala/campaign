@@ -21,3 +21,10 @@ entity.campaign.delete_form:
   base_route:  entity.campaign.canonical
   title: Delete
   weight: 10
+
+# Campaign entity setting
+entity.campaign.settings:
+  route_name: entity.campaign.settings
+  title: 'Settings'
+  base_route: entity.campaign.canonical
+  weight: 10
